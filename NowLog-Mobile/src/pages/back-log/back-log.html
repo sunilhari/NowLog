@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>BackLog</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-card *ngFor = "let log of logs">
+      <ion-card-content>
+        <ion-card-title>
+          {{log.description}}
+        </ion-card-title>
+        <p>
+          {{log.user}}
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+  <ion-fab bottom right>
+    <button ion-fab mini (click)="showNewLog()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+</ion-content>

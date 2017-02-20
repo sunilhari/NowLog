@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>NewLog</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-item>
+    <ion-label floating>Log</ion-label>
+    <ion-textarea [(ngModel)]="description"></ion-textarea>
+  </ion-item>
+  <ion-item>
+    <div class="row">
+      <div class="col text-center">
+        <button ion-button outline right (click)="insertLog()">Log</button>
+      </div>
+    </div>
+  </ion-item>
+</ion-content>
